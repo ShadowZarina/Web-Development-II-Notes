@@ -9,6 +9,38 @@ Link to HTML
 ```
 Script Block
 ```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <h1>Hello World</h1>
+
+    <!-- This is an internal JS script block -->
+    <script>
+        console.log("This code runs inside the HTML script block!");
+        alert("Welcome to the site!");
+    </script>
+
+</body>
+</html>
+```
+
+JavaScript Code Block
+```
+// Standalone block used for scoping
+{
+    let localMessage = "I only exist inside this block";
+    var globalMessage = "I leak outside of this block"; 
+    
+    console.log(localMessage); // Works
+}
+
+// Scoping demonstration
+console.log(globalMessage); // Works (var is not block-scoped)
+// console.log(localMessage); // Error! (let is block-scoped)
 ```
 
 # Variables = var, let, const
