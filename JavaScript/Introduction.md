@@ -1,5 +1,7 @@
 # JavaScript 
 - is a WEAKLY TYPED/UNTYPED language
+- it allows *implicit type conversion* (also known as type coercion) when performing operations on mismatched data types
+- JavaScript will automatically change data from one type to another to complete an operation.
 
 Link to HTML
 ```
