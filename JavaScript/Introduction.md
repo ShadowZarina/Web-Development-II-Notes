@@ -72,39 +72,60 @@ alert(`Hello my name is ${name}`);
 
 # Operators
 - Operands
-1. Arithmetic Operators
-Used to perform standard mathematical calculations on numbers: [1] (https://www.geeksforgeeks.org/javascript/javascript-operators/), [2] (https://medium.com/@shubham.bhati.7823/all-types-of-operators-in-javascript-explained-bafe97ebc36b)+ (Addition): Adds values or concatenates strings.- (Subtraction): Subtracts the right value from the left value.* (Multiplication): Multiplies values./ (Division): Divides the left value by the right value.% (Modulus): Returns the division remainder.** (Exponentiation): Raises the base to the power of the exponent (e.g., 2 ** 3 = 8).++ (Increment): Increases a numeric value by 1.-- (Decrement): Decreases a numeric value by 1. [1] (https://www.youtube.com/watch?v=vI95K-_JLOw&t=436), [2] (https://www.scribd.com/document/727091603/JS2), [3] (https://www.programiz.com/javascript/operators), [4] (https://www.w3schools.com/js/js_operators.asp), [5] (https://www.geeksforgeeks.org/javascript/javascript-operators/), [6] (https://www.youtube.com/watch?v=IxHo9BwpNWM), [7] (https://www.freecodecamp.org/news/javascript-operators/)
-2. Unary Operators
-= These include specific arithmetic (unary plus/minus, increment/decrement) operators, logical NOT, and bitwise NOT
-3. Comparison Operators
+## 1. Arithmetic Operators
+Used to perform standard mathematical calculations on numbers:
+- + (Addition): Adds values or concatenates strings.
+- - (Subtraction): Subtracts the right value from the left value.
+- * (Multiplication): Multiplies values.
+- / (Division): Divides the left value by the right value.
+- % (Modulus): Returns the division remainder.
+- ** (Exponentiation): Raises the base to the power of the exponent (e.g., 2 ** 3 = 8).
+- ++ (Increment): Increases a numeric value by 1.
+- -- (Decrement): Decreases a numeric value by 1.
+  
+## 2. Unary Operators
+- A unary operator is an operator that requires only one operand to perform an action. They can be placed either before the operand (prefix) or after it (postfix).
+- These include specific arithmetic (unary plus/minus, increment/decrement) operators, logical NOT, and bitwise NOT
+  
+## 3. Comparison Operators
 Used to compare two values and return a boolean (true or false):
 - == (Equality): Checks if values are equal, performing type conversion if necessary.
 - === (Strict Equality): Checks if both the value and the data type are identical.
 - != (Inequality): Checks if values are not equal.
 - !== (Strict Inequality): Checks if values or types are not equal.
-- > / < (Greater than / Less than): Evaluates if the left value is larger or smaller than the right.
-  > >= / <= (Greater than or equal / Less than or equal): Evaluates inclusive limits.
+- `> / <` (Greater than / Less than): Evaluates if the left value is larger or smaller than the right.
+- `>= / <=` (Greater than or equal / Less than or equal): Evaluates inclusive limits.
+  
 ```
 (10/2) == “5” is TRUE
 (10/2) === “5” is FALSE?
 11 === “11” is FALSE
 10 != “10” is FALSE	
 ```
-4. Bitwise Operators
+
+## 4. Bitwise Operators
 Operate directly on the 32-bit binary representations of numbers:
 - & (Bitwise AND)
 - | (Bitwise OR)
 - ^ (Bitwise XOR)
 - ~ (Bitwise NOT)<< (Left shift)
-- >> (Sign-propagating right shift)
-- >>> (Zero-fill right shift)
+- `>>` (Sign-propagating right shift)
+- `>>>` (Zero-fill right shift)
 
-5. Logical Operators
+## 5. Logical Operators
 - && (Logical AND): Returns true if both operands are true.
 - || (Logical OR): Returns true if at least one operand is true.
 - ! (Logical NOT):Reverses the boolean result (turns true to false, and vice versa).
 
-6. Assignment OperatorsUsed to assign values to variables. They can also combine an arithmetic operation with an assignment: [1] (https://medium.com/@mujjuimran74/what-are-javascript-operators-and-their-types-part1-0da2a281a666), [2] (https://www.geeksforgeeks.org/javascript/javascript-operators/)= (Assignment): Assigns a value to a variable.+= (Addition Assignment): Adds a value to a variable and assigns the result (e.g., x += 5 is x = x + 5).-= (Subtraction Assignment): Subtracts and assigns.*= (Multiplication Assignment): Multiplies and assigns./= (Division Assignment): Divides and assigns.%= (Modulus Assignment): Calculates the remainder and assigns.**= (Exponentiation Assignment): Raises to a power and assigns. [1] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators), [2] (https://www.geeksforgeeks.org/javascript/javascript-operators/), [3] (https://www.scribd.com/document/727091603/JS2), [4] (https://medium.com/@iqbal-rosyidi/javascript-operators-explained-from-basics-to-advanced-tricks-e2d2578dcd3f), [5] (https://www.w3schools.com/js/js_operators.asp), [6] (https://www.freecodecamp.org/news/javascript-operators/)
+## 6. Assignment Operators
+Used to assign values to variables. They can also combine an arithmetic operation with an assignment: 
+- = (Assignment): Assigns a value to a variable.
+- += (Addition Assignment): Adds a value to a variable and assigns the result (e.g., x += 5 is x = x + 5).
+- -= (Subtraction Assignment): Subtracts and assigns.
+- *= (Multiplication Assignment): Multiplies and assigns.
+- /= (Division Assignment): Divides and assigns.
+- %= (Modulus Assignment): Calculates the remainder and assigns.
+- **= (Exponentiation Assignment): Raises to a power and assigns. 
 
 # Functions 
 Starts with function, has parameters and body, contains statements, enclosed in curly braces
