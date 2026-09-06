@@ -3,6 +3,13 @@
 - it allows *implicit type conversion* (also known as type coercion) when performing operations on mismatched data types
 - JavaScript will automatically change data from one type to another to complete an operation.
 
+# OUTLINE
+1. Introduction
+2. Basics
+3. JavaScript Objects
+4. DOM
+5. Event Handling
+
 Link to HTML
 ```
 <script type=”text/javascript”>
@@ -220,7 +227,10 @@ Delete keyword to delete object properties (removes property and value)
 
 Delete objectName.property;
 
-# DOM  – Document Object Model
+# DOM MANIPULATION
+– Document Object Model
+
+Example Functions:
 ```
 Var obj = 
 document.getElementsByTagName(“tag_name”)[index];
