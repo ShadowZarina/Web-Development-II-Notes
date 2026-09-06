@@ -1,8 +1,3 @@
-# JavaScript 
-- is a WEAKLY TYPED/UNTYPED language
-- it allows *implicit type conversion* (also known as type coercion) when performing operations on mismatched data types
-- JavaScript will automatically change data from one type to another to complete an operation.
-
 # OUTLINE
 1. Introduction
 2. Basics
@@ -10,6 +5,13 @@
 4. DOM
 5. Event Handling
 
+# 1. Introduction
+## JavaScript 
+- is a WEAKLY TYPED/UNTYPED language
+- it allows *implicit type conversion* (also known as type coercion) when performing operations on mismatched data types
+- JavaScript will automatically change data from one type to another to complete an operation.
+
+# 2. Basics
 Link to HTML
 ```
 <script type=”text/javascript”>
@@ -36,6 +38,7 @@ Script Block
 ```
 
 JavaScript Code Block
+
 ```
 // Standalone block used for scoping
 {
@@ -50,18 +53,17 @@ console.log(globalMessage); // Works (var is not block-scoped)
 // console.log(localMessage); // Error! (let is block-scoped)
 ```
 
-# Variables = var, let, const
+## Variables 
+- declared with var, let, const
+
 ```
-function foo() {
-	if true {
-		console.log(var1);
-	}
-}
+var item = 5;
+let name = "Andrea";
 ```
 
 Naming variables = can contain numbers but not as first digit, don’t use keywords
 
-# Data types:
+## Data Types
 1. Number
 - Infinity
 - -Infinity
@@ -77,9 +79,9 @@ alert(`Hello my name is ${name}`);
 4. Null (empty/unknown value)
 5. Undefined (value not assigned)
 
-# Operators
+## Operators
 - Operands
-## 1. Arithmetic Operators
+### 1. Arithmetic Operators
 Used to perform standard mathematical calculations on numbers:
 - + (Addition): Adds values or concatenates strings.
 - - (Subtraction): Subtracts the right value from the left value.
@@ -90,11 +92,11 @@ Used to perform standard mathematical calculations on numbers:
 - ++ (Increment): Increases a numeric value by 1.
 - -- (Decrement): Decreases a numeric value by 1.
   
-## 2. Unary Operators
+### 2. Unary Operators
 - A unary operator is an operator that requires only one operand to perform an action. They can be placed either before the operand (prefix) or after it (postfix).
 - These include specific arithmetic (unary plus/minus, increment/decrement) operators, logical NOT, and bitwise NOT
   
-## 3. Comparison Operators
+### 3. Comparison Operators
 Used to compare two values and return a boolean (true or false):
 - == (Equality): Checks if values are equal, performing type conversion if necessary.
 - === (Strict Equality): Checks if both the value and the data type are identical.
@@ -110,7 +112,7 @@ Used to compare two values and return a boolean (true or false):
 10 != “10” is FALSE	
 ```
 
-## 4. Bitwise Operators
+### 4. Bitwise Operators
 Operate directly on the 32-bit binary representations of numbers:
 - & (Bitwise AND)
 - | (Bitwise OR)
@@ -119,12 +121,12 @@ Operate directly on the 32-bit binary representations of numbers:
 - `>>` (Sign-propagating right shift)
 - `>>>` (Zero-fill right shift)
 
-## 5. Logical Operators
+### 5. Logical Operators
 - && (Logical AND): Returns true if both operands are true.
 - || (Logical OR): Returns true if at least one operand is true.
 - ! (Logical NOT):Reverses the boolean result (turns true to false, and vice versa).
 
-## 6. Assignment Operators
+### 6. Assignment Operators
 Used to assign values to variables. They can also combine an arithmetic operation with an assignment: 
 - = (Assignment): Assigns a value to a variable.
 - += (Addition Assignment): Adds a value to a variable and assigns the result (e.g., x += 5 is x = x + 5).
@@ -134,8 +136,19 @@ Used to assign values to variables. They can also combine an arithmetic operatio
 - %= (Modulus Assignment): Calculates the remainder and assigns.
 - **= (Exponentiation Assignment): Raises to a power and assigns. 
 
-# Functions 
+## Functions 
 Starts with function, has parameters and body, contains statements, enclosed in curly braces
+
+Examples:
+
+```
+function foo() {
+	if true {
+		console.log(var1);
+	}
+}
+```
+
 ```
 const square = function(x) {
 	Return x * x;
@@ -147,18 +160,19 @@ function square(x) {
 
 console.log(square(12));
 ```
-# ARROW FUNCTION 
+### ARROW FUNCTION 
 
 Const variable = parameter => {
 	statements;
 };
 
-# I/O FUNCTIONS
+### I/O FUNCTIONS
 
 console.log(string)
 Var obj = prompt(“string”);
 
-# CONDITIONAL STATEMENTS = if/else if/else , switch case 
+## CONDITIONAL STATEMENTS 
+= if/else if/else , switch case 
 
 Pretest loops (condition checked first)
 - for loop
@@ -179,7 +193,7 @@ For (var variable of iterable) {
 - while loop
 - do-while loop
 
-# ARRAYS
+## ARRAYS
 - list-like objects that can hold more than one value at once
 
 
@@ -193,7 +207,7 @@ Let pos = arr.indexOf(value);
 Remove an item by index position:
 arr.splice(index, number);
 
-# OBJECTS
+# 3. OBJECTS
 1. One way to create is by using braces
 ```
 Let car = {
@@ -227,7 +241,7 @@ Delete keyword to delete object properties (removes property and value)
 
 Delete objectName.property;
 
-# DOM MANIPULATION
+# 4. DOM MANIPULATION
 – Document Object Model
 
 Example Functions:
@@ -260,7 +274,7 @@ classList.remove(“class”)
 classList.toggle(“class”)
 classList.contains(“class”)
 ```
-# EVENT HANDLING
+# 5. EVENT HANDLING
 Event = Signal that something has happened, generated by all DOM elements
 
 - Onload
