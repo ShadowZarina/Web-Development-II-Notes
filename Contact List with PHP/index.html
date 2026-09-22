@@ -1,0 +1,58 @@
+<!-- 
+INSTRUCTIONS:
+1. Add functionality to add contacts with the ff. details: 
+last name, first name, email address, and contact number.
+2. Display contact details in tabular form.
+3. Update functionality to edit contact details.
+4. Delete functionality to delete contacts (individually).
+5. Use <table>. Make the UI presentable.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head: Metadata and Links -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact List</title>
+</head>
+
+<!-- Body: Website Content -->
+<body>
+
+  <div id="container">
+    <h1>Contact List</h1>
+
+    <!-- Table of Contacts -->
+    <table id="contact-table">
+        <!-- Table Column Titles -->
+        <thead>
+            <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email Address</th>
+            <th>Contact Number</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+
+        <!-- Table Rows: populated dynamically from the database by script.js -->
+        <tbody>
+        </tbody>
+        </table>
+
+        <!-- Button to Add Contacts -->
+        <button id="add-button" onclick="addContact()">Add Contact</button>
+	</div>
+
+    <!-- Credits & JS Link -->
+    <p>Created by Andrea Keisha To Chip, BS-CS 2</p>
+    <script src="script.js"></script>
+
+  </body>
+</html>
