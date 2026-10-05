@@ -22,7 +22,7 @@ This repository also includes the projects we were tasked to create throughout t
 
 ## How to Run Projects?
 
-To run projects including PHP and MySQL Databases:
+### **To run projects including PHP and MySQL Databases:**
 1. **Install and start XAMPP**
 - Download XAMPP from apachefriends.org if you don't have it. Open the XAMPP Control Panel and click Start next to both Apache and MySQL — both need to show a green/running status.
 2. **Copy the project into htdocs**
@@ -35,3 +35,25 @@ To run projects including PHP and MySQL Databases:
 - Close the Live Server tab. Instead, visit http://localhost/contact-list/index.html in your browser. This routes requests through Apache/PHP, so the .php files actually execute and return real JSON.
 6. **Test it**
 - Click Add Contact, fill in the fields, and Save. Refresh the page — the contact should still be there, because it's now really stored in the local MySQL database instead of only living in the browser tab.
+<br><br>
+
+### **To run projects involving Vite or React**
+1. Install Node.js (If not already installed)
+- React requires Node.js and its package manager, npm, to manage code packages and run local servers.
+  a. Download and install the LTS (Long Term Support) version from the Official Node.js Website.<br>
+  b. Open your computer's terminal (Command Prompt, PowerShell, or macOS Terminal) and verify the installation by typing:bash
+```
+node -v
+npm -v
+```
+2. Open Your Project in a Terminal
+- Navigate to the folder containing your React project. If you use an editor like Visual Studio Code, you can open the project folder in the editor and open the built-in terminal (Ctrl + ~ or Terminal > New Terminal).
+- If you are using a standard command prompt, change your directory to the project folder:
+```cd path/to/your/react-project```
+3. Install Project Dependencies
+- Before running the app for the first time (or if you just downloaded/cloned the project), you must download the required packages listed in the package.json file. Run the following command:
+```npm install```
+4. Start the Development Server
+- The exact command to run your project depends on how the React application was initially created. Look at your project files to see which command to use:
+- For Vite projects (or React projects with vite.config.js file in the root folder), start the server using:
+```npm run dev```
