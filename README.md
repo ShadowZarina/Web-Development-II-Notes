@@ -9,6 +9,7 @@ This is a list of the topics we discussed throughout the semester!
 1. JS
 2. JQuery
 3. PHP & MySQL
+4. ReactJS (including Node.js and Vite)
 <br>
 
 ## Projects
@@ -16,6 +17,7 @@ This repository also includes the projects we were tasked to create throughout t
 1. Contact List (HTML, CSS, JS)
 2. To-Do List (with APIs as reference)
 3. Contact List (with PHP & MySQL)
+4. React: Introductory Project
 <br>
 
 ## How to Run Projects?
