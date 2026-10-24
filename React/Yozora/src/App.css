@@ -1,0 +1,318 @@
+/* ---------- Layout ---------- */
+.App {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.App-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  letter-spacing: 0.08em;
+  margin: 0;
+  color: var(--ice);
+  text-shadow: 0 0 24px rgba(206, 249, 255, 0.35);
+}
+
+.App-tagline {
+  margin: 0.25rem 0 0;
+  color: var(--slate);
+  letter-spacing: 0.06em;
+}
+
+.App-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .App-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.App-calendar,
+.App-quests {
+  background: rgba(1, 32, 78, 0.55);
+  border: 1px solid var(--blue);
+  border-radius: 16px;
+  padding: 1.25rem;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- Quest navigation ---------- */
+.quest-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.quest-nav-button {
+  flex: 1 1 auto;
+  padding: 0.6rem 1rem;
+  background: var(--midnight);
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.quest-nav-button:hover {
+  border-color: var(--ice);
+}
+
+.quest-nav-button.active {
+  background: var(--blue);
+  border-color: var(--ice);
+  font-weight: 700;
+}
+
+/* ---------- Calendar ---------- */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.calendar-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.calendar-arrow {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+}
+
+.calendar-arrow:hover {
+  background: var(--blue);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekdays {
+  margin-bottom: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.calendar-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.calendar-cell.blank {
+  pointer-events: none;
+}
+
+button.calendar-cell:hover {
+  background: var(--blue);
+}
+
+.calendar-cell.today {
+  border-color: var(--ice);
+  box-shadow: 0 0 10px rgba(206, 249, 255, 0.35);
+  font-weight: 700;
+}
+
+.calendar-cell.selected {
+  background: var(--blue);
+  border-color: var(--slate);
+}
+
+.calendar-today {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid var(--slate);
+  border-radius: 999px;
+  color: var(--ice);
+}
+
+.calendar-today:hover {
+  background: var(--blue);
+}
+
+/* ---------- Quest list ---------- */
+.quest-list-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quest-list-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.quest-list-count {
+  color: var(--slate);
+  font-size: 0.9rem;
+}
+
+.quest-list-blurb {
+  margin: 0.25rem 0 1.25rem;
+  color: var(--slate);
+}
+
+.quest-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quest-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.9rem;
+  background: var(--midnight);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+}
+
+.quest-input::placeholder {
+  color: var(--slate);
+}
+
+.quest-add,
+.quest-suggest-button {
+  padding: 0.65rem 1.1rem;
+  background: var(--blue);
+  border: 1px solid var(--slate);
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.quest-add:hover,
+.quest-suggest-button:hover:not(:disabled) {
+  border-color: var(--ice);
+}
+
+.quest-suggest {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.quest-suggest-button {
+  background: transparent;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.quest-suggest-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.quest-error {
+  color: var(--ice);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.quest-empty {
+  margin: 1.5rem 0 0;
+  text-align: center;
+  color: var(--slate);
+  font-family: var(--font-title);
+  font-style: italic;
+}
+
+.quest-items {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quest-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba(1, 12, 33, 0.7);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+}
+
+.quest-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.quest-label input[type='checkbox'] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--ice);
+}
+
+.quest-text {
+  overflow-wrap: anywhere;
+}
+
+.quest-item.done .quest-text {
+  text-decoration: line-through;
+  color: var(--slate);
+}
+
+.quest-delete {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: var(--slate);
+}
+
+.quest-delete:hover {
+  border-color: var(--ice);
+  color: var(--ice);
+}

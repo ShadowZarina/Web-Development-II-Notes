@@ -1,0 +1,106 @@
+:root {
+  /* Yozora night-sky palette */
+  --midnight: #010c21;
+  --navy: #01204e;
+  --ice: #cef9ff;
+  --blue: #325187;
+  --slate: #6575a4;
+
+  --font-title: 'Libre Caslon Text', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  color-scheme: dark;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ice);
+  background-color: var(--midnight);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% -10%, var(--navy) 0%, transparent 65%),
+    var(--midnight);
+  background-attachment: fixed;
+}
+
+/* Starfield: two fixed layers of tiny dots that twinkle out of sync */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: repeat;
+}
+
+body::before {
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, var(--ice), transparent),
+    radial-gradient(1px 1px at 90px 80px, var(--ice), transparent),
+    radial-gradient(1.5px 1.5px at 160px 20px, var(--ice), transparent),
+    radial-gradient(1px 1px at 220px 130px, var(--slate), transparent),
+    radial-gradient(1px 1px at 60px 150px, var(--slate), transparent);
+  background-size: 260px 190px;
+  opacity: 0.55;
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+body::after {
+  background-image:
+    radial-gradient(1px 1px at 40px 60px, var(--ice), transparent),
+    radial-gradient(1.5px 1.5px at 140px 110px, var(--ice), transparent),
+    radial-gradient(1px 1px at 200px 40px, var(--slate), transparent);
+  background-size: 310px 230px;
+  opacity: 0.4;
+  animation: twinkle 9s ease-in-out infinite reverse;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 2px;
+}
