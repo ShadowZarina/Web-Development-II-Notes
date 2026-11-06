@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Sign In | Sign Up</title>
+</head>
+<body>
+
+    <!-- Sign In Form -->
+    <div id="signin-section" class="auth-container">
+        <h2 class="auth-title">Sign In</h2>
+        <p class="auth-description">Please fill in this form to sign in to your account!</p>
+        
+        <form id="signinForm" onsubmit="signinSubmit(event)">
+            <div class="auth-input-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="23100488@usc.edu.ph" required>
+            </div>
+            <div class="auth-input-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="••••••" required>
+            </div>
+            <button type="submit" class="auth-btn">Sign In</button>
+        </form>
+
+        <div class="auth-switch-text">
+            Don't have an account? <a onclick="toggleForms()">Sign up here</a>
+        </div>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup-section" class="auth-container auth-hidden">
+        <h2 class="auth-title">Sign Up</h2>
+        <p class="auth-description">Please fill in this form to create an account!</p>
+        
+        <form id="signupForm" onsubmit="signupSubmit(event)">
+            <div class="auth-input-row">
+                <div class="auth-input-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" placeholder="Andrea" required>
+                </div>
+                <div class="auth-input-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" placeholder="To Chip" required>
+                </div>
+            </div>
+            <div class="auth-input-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="23100488@usc.edu.ph" required>
+            </div>
+            <div class="auth-input-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="••••••" required>
+            </div>
+            <div class="auth-input-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" placeholder="••••••" required>
+            </div>
+            <button type="submit" class="auth-btn">Sign Up</button>
+        </form>
+
+        <div class="auth-switch-text">
+            Already have an account? <a onclick="toggleForms()">Sign in here</a>
+        </div>
+    </div>
+
+    <!-- Sign Out Button -->
+    <div class="auth-container auth-hidden" id="signout-section" style="margin-top: 20px;">
+        <button class="auth-btn" onclick="signoutClick(event)">Sign Out</button>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signinSection = document.getElementById('signin-section');
+            const signupSection = document.getElementById('signup-section');
+            
+            signinSection.classList.toggle('auth-hidden');
+            signupSection.classList.toggle('auth-hidden');
+        }
+    </script>
+    <script src="auth.js"></script>
+
+</body>
+</html>

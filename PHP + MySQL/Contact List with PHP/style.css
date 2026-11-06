@@ -1,0 +1,166 @@
+/* Body Styling */
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;   
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    background-color: #84A1C4;
+}
+
+/* Body Background Image */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("plaid.jpg");
+    background-repeat: repeat;
+    background-size: 200px; 
+    opacity: 0.35;       
+    z-index: -1;
+}
+
+/* Container Styling */
+
+#container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Table Styling */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1.5px solid #84A1C4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background-color: #C5D8F1;
+    color: #2B547E;
+    font-weight: 600;
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1.5px solid #84A1C4;
+}
+
+table td {
+    padding: 14px 18px;
+    color: #334155;
+    border-bottom: 1px solid #EFF3F9;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background-color: #EFF3F9;
+}
+
+/* Text Styling */
+
+h1 {
+    text-align: center;
+    color: #2B547E;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+p {
+    color: white;
+    bottom: 5px;
+}
+
+/* General Button Styling */
+
+button {
+    background-color: #607B9B;
+    color: white;
+    border: none; 
+    flex-direction: row;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6F95C3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Specific Button Styling */
+
+#add-button {
+    display: block;
+    margin: 24px auto 0 auto;
+    padding: 11px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(96, 123, 155, 0.25);
+}
+
+.edit-button, .delete-button {
+    width: 35px;
+    height: 35px;
+    padding: 7px;
+}
+
+.edit-button img, .delete-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.save-button, .cancel-button {
+    font-size: 0.95rem;
+    border-radius: 6px;
+    padding: 10px 16px;
+}
+
+/* Input and Form Styling */
+
+table input[type="text"],
+table input[type="email"],
+table input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #F5FAFF;
+    border: 1.5px solid #84A1C4;
+    border-radius: 6px;
+    padding: 8px 12px;
+    outline: none;
+}
+
+table input[type="text"]:focus,
+table input[type="email"]:focus,
+table input[type="tel"]:focus {
+    border-color: #2B547E;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(132, 161, 196, 0.25);
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}

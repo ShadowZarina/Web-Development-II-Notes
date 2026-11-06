@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>To-Do Web App</title>
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h2 class="todo-title">My To-Do List</h2>
+
+        <!-- Add / Edit Task Input Form -->
+        <div id="form-container">
+            <h3 id="form-title" style="font-size: 20px;">Add New Task</h3>
+            <form id="taskForm" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="edit_item_id">
+                <div class="todo-form-group">
+                    <label for="item_name" class="todo-label">Item Name</label>
+                    <input type="text" id="item_name" class="todo-input" required placeholder="e.g., Buy Groceries">
+                </div>
+                <div class="todo-form-group">
+                    <label for="item_description" class="todo-label">Item Description</label>
+                    <textarea id="item_description" class="todo-textarea" required placeholder="e.g., Make sure to refill snacks, milk, and bread."></textarea>
+                </div>
+                <button type="submit" class="todo-btn" id="submit-btn">Add To Do Task</button>
+                <button type="button" class="todo-btn" id="cancel-btn" style="background-color: #6c757d; display: none;" onclick="resetForm()">Cancel Edit</button>
+            </form>
+        </div>
+
+        <hr class="todo-hr">
+
+        <!-- Task Filtering & Task List -->
+        <div class="todo-controls-bar">
+            <h3 class="todo-title" style="font-size: 20px; margin: 0;">Task List</h3>
+            <div>
+                <label for="statusFilter" class="todo-label" style="display:inline; margin-right: 5px;">Filter Status:</label>
+                <select id="statusFilter" class="todo-select" style="width: auto; display: inline-block;" onchange="loadTasks()">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+        </div>
+
+        <ul id="taskList" class="todo-task-list">
+
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
